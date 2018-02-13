@@ -9,13 +9,13 @@
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate('gameContainer', 'Build/MiamiDerToten.json', {onProgress: UnityProgress}); 
+      var gameInstance; 
     </script>
   </head>
   <body>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 900px; height: 506px"></div>
-      <button type="button" autofocus onclick="">Click here to load game!</button>
+      <button type="button" autofocus onclick="gameInstance = UnityLoader.instantiate('gameContainer', 'Build/MiamiDerToten.json', {onProgress: UnityProgress});">Click here to load game!</button>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
